@@ -1,6 +1,14 @@
 function main()
 {
-  console.log("Práctica vídeo CSAAI...")
+
+  function hora(segundos){
+     var d=new Date(segundos*1000);
+     var hora = (d.getHours()==0)?23:d.getHours()-1;
+     var hora = (hora<9)?"0"+hora:hora;
+     var minuto = (d.getMinutes()<9)?"0"+d.getMinutes():d.getMinutes();
+     var segundo = (d.getSeconds()<9)?"0"+d.getSeconds():d.getSeconds();
+     return hora+":"+minuto+":"+segundo;
+    }
 
   // VÍDEO 1 REPRODUCIENDO
   video1 = document.getElementById("video1")
@@ -33,28 +41,25 @@ function main()
   //CAMBIANDO EL VÍDEO A REPRODUCIR
   play1.onclick = () => {
     console.log("Ver 1!")
-    video4.src ="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente1.mp4"
+    var t1 = video1.currentTime;
+    video4.src ="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente1.mp4";
+    video4.currentTime = t1;
   }
 
   play2.onclick = () => {
     console.log("Ver 2!")
+    var t2 = video2.currentTime;
     video4.src ="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente2.mp4"
+    video4.currentTime = t2;
   }
 
   play3.onclick = () => {
     console.log("Ver 3!")
+    var t3 = video3.currentTime;
     video4.src ="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente3.mp4"
+    video4.currentTime = t3;
 
   }
-
-  function hora(segundos){
-     var d=new Date(segundos*1000);
-     var hora = (d.getHours()==0)?23:d.getHours()-1;
-     var hora = (hora<9)?"0"+hora:hora;
-     var minuto = (d.getMinutes()<9)?"0"+d.getMinutes():d.getMinutes();
-     var segundo = (d.getSeconds()<9)?"0"+d.getSeconds():d.getSeconds();
-     return hora+":"+minuto+":"+segundo;
-    }
 
 
 //DURACIÓN DEL VÍDEO
@@ -82,6 +87,12 @@ function main()
 //CUANDO PASAS EL RATÓN EL VÍDEO TIENE SONIDO
   video1.onmouseover = () => {
     console.log("Mouse over!!")
-    //video1.muted = false;
+    video1.muted = false;
   }
+
+
+/*
+- Si acaba el video y le das a loop ya no funciona
+- no funciona el mute
+*/
 }
