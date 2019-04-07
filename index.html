@@ -3,24 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>Práctica 4 CSAAI</title>
+    <link rel="stylesheet" href="video.css">
     <script src="video.js"></script>
   </head>
   <body onload="main();">
-    <video id="video1" autoplay loop muted></video>
-    <video id="video2" autoplay loop muted></video>
-    <video id="video3" autoplay loop muted></video>
-    <br>
-    <button type="button" id="play1">Seleccionar VIDEO 1</button>
-    <button type="button" id="play2">Seleccionar VIDEO 2</button>
-    <button type="button" id="play3">Seleccionar VIDEO 3</button>
-    <br>
-    <br>
-    <video id="video4" autoplay loop muted></video>
-    <br>
-    <p>Vídeo en loop</p>
-    <button type="button" id="loop">Loop</button>
-    <button type="button" id="noloop">No loop</button>
-    <p> Duración del vídeo</p>
-    <p id = tduracion></p>
+    <div class = "videos">
+      <div id = "seccion1">
+        <video id="video1" autoplay loop muted></video>
+        <br>
+        <button class = "button" type="button" id="play1">Seleccionar VIDEO 1</button>
+        <br>
+      </div>
+
+      <div id = "seccion2">
+        <video id="video2" autoplay loop muted></video>
+        <br>
+        <button class = "button" type="button" id="play2">Seleccionar VIDEO 2</button>
+        <br>
+      </div>
+
+      <div id = "seccion3">
+        <video id="video3" autoplay loop muted></video>
+        <br>
+        <button class = "button" type="button" id="play3">Seleccionar VIDEO 3</button>
+      </div>
+    </div>
+
+    <div class = "principalvideo">
+      <div id  = "video4principal">
+        <br>
+        <video id="video4" autoplay loop muted></video>
+        <br>
+      </div>
+      <div id = "info">
+        <p>Vídeo en loop</p>
+        <button class = "button" type="button" id="loop">Loop</button>
+        <button class = "button" type="button" id="noloop">No loop</button>
+        <p> Duración del vídeo</p>
+        <p id = tduracion></p>
+      </div>
+    </div>
   </body>
 </html>
