@@ -90,7 +90,6 @@ function main()
     video1.muted = false;
   }
 
-
 /*
 - Si acaba el video y le das a loop ya no funciona
 - no funciona el mute
