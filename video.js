@@ -31,14 +31,6 @@ function main()
 
   var video1 = new video("video1",200,100);
 
-  video1.video.onmouseover = () => {
-      video1.video.muted = false;
-  }
-
-  video1.video.onmouseout = () => {
-      video1.video.muted = true;
-  }
-
   video1.url("https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente1.mp4");
   video1.p_play("play1");
   video1.play.onclick = () => {
@@ -46,6 +38,15 @@ function main()
     video1.styleput();
     video2.styleoff();
     video3.styleoff();
+  }
+
+  video1.video.onmouseover = () => {
+    video1.video.muted = false;
+    console.log(video1.video.paused)
+  }
+
+  video1.video.onmouseout = () => {
+      video1.video.muted = true;
   }
 
 
@@ -75,6 +76,14 @@ function main()
     video3.styleput();
     video1.styleoff();
     video2.styleoff();
+  }
+
+  video3.video.onmouseover = () => {
+      video3.video.muted = false;
+  }
+
+  video3.video.onmouseout = () => {
+      video3.video.muted = true;
   }
 
   function hora(segundos){
