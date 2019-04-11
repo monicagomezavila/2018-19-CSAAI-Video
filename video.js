@@ -89,7 +89,7 @@ function main()
   video4 = document.getElementById("video4")
   video4.width = 600;
   video4.height= 400;
-  video4.src ="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente1.mp4"
+  video1.principal(video4, video2.video,video3.video);
 
 
 //DURACIÓN DEL VÍDEO
