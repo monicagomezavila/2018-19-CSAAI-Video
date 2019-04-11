@@ -31,15 +31,15 @@ function main()
     video1.principal(video4, video2.video,video3.video);
   }
 
-//  video1.video.onmouseover = () => {
-//    video1.video.muted = false;
-//    video1.video.play()
-//  }
+  video1.video.onmouseover = () => {
+    video1.video.muted = false;
+    video1.video.play()
+  }
 
-//  video1.video.onmouseout = () => {
-//      video1.video.muted = true;
-//      video1.video.play()
-//  }
+  video1.video.onmouseout = () => {
+      video1.video.muted = true;
+      video1.video.play()
+  }
 
 
   var video2 = new video("video2",200,100);
@@ -49,15 +49,15 @@ function main()
     video2.principal(video4, video1.video,video3.video);
   }
 
-//  video2.video.onmouseover = () => {
-//      video2.video.muted = false;
-//      video2.video.play()
-//  }
+  video2.video.onmouseover = () => {
+      video2.video.muted = false;
+      video2.video.play()
+  }
 
-//  video2.video.onmouseout = () => {
-//      video2.video.muted = true;
-//      video2.video.play()
-//  }
+  video2.video.onmouseout = () => {
+      video2.video.muted = true;
+      video2.video.play()
+  }
 
   var video3 = new video("video3",200,100);
   video3.url("https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente3.mp4");
@@ -66,15 +66,15 @@ function main()
     video3.principal(video4, video1.video,video2.video);
   }
 
-//  video3.video.onmouseover = () => {
-//      video3.video.muted = false;
-//      video3.video.play()
-//  }
+  video3.video.onmouseover = () => {
+      video3.video.muted = false;
+      video3.video.play()
+  }
 
-//  video3.video.onmouseout = () => {
-//      video3.video.muted = true;
-//      video3.video.play()
-//  }
+  video3.video.onmouseout = () => {
+      video3.video.muted = true;
+      video3.video.play()
+  }
 
   function hora(segundos){
      var d=new Date(segundos*1000);
@@ -85,7 +85,7 @@ function main()
      return hora+":"+minuto+":"+segundo;
     }
 
-  // VÍDEO PRINCIPAL
+// VÍDEO PRINCIPAL
   video4 = document.getElementById("video4")
   video4.width = 600;
   video4.height= 400;
@@ -98,7 +98,6 @@ function main()
   },true);
 
 
-//VÍDEO INICIAL EN LOOPING O NO
   var loop = document.getElementById('loop');
   loop.onclick = () => {
     console.log("looping!");
